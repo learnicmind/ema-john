@@ -5,7 +5,7 @@ import './ReviewItem.css';
 
 
 const ReviewItem = ({ product, handleRemoveFromCart }) => {
-    const { id, img, price, name, quantity } = product;
+    const { _id, img, price, name, quantity } = product;
 
     return (
         <div className='review-item'>
@@ -15,7 +15,7 @@ const ReviewItem = ({ product, handleRemoveFromCart }) => {
                 <p>Price: <span className='orange-text'>${price}</span></p>
                 <p>Order Quantity: <span className='orange-text'>{quantity}</span></p>
             </div>
-            <button onClick={() => handleRemoveFromCart(id)} className='btn-delete'>
+            <button onClick={() => handleRemoveFromCart(_id)} className='btn-delete'>
                 <FontAwesomeIcon className='delete-icon' icon={faTrashAlt} />
             </button>
         </div>
